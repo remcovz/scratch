@@ -1,9 +1,9 @@
 #include <sys/syscall.h>
 #include <unistd.h>
 
-const char message[] = "Hello World!\n";
+const char txt[] = "Hello World!\n";
 
 int main() {
-  syscall(SYS_write, STDOUT_FILENO, message, sizeof(message) - 1);
+  syscall(SYS_write, STDOUT_FILENO, txt, sizeof(txt) - 1);
   return 0;
 }
